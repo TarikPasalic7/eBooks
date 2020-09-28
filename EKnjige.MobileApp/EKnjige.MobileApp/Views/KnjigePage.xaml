@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewModels="clr-namespace:EKnjige.MobileApp.ViewModels" xmlns:converters="clr-namespace:EKnjige.MobileApp.Converters"
+             mc:Ignorable="d"
+             x:Class="EKnjige.MobileApp.Views.KnjigePage"
+             BackgroundColor="LightSteelBlue">
+
+    <ContentPage.BindingContext>
+        <viewModels:KnjigeViewModel></viewModels:KnjigeViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Knjige"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   Padding="0,20,0,0"
+                   FontSize="Header"
+                   TextColor="RoyalBlue"
+                   FontAttributes="Bold"/>
+            <Picker ItemsSource="{Binding KategorijaList}" SelectedItem="{Binding SelectedKategorija}" ItemDisplayBinding="{Binding Naziv}"></Picker>
+            <ListView ItemsSource="{Binding KnjigaList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                          
+                            <StackLayout Padding="10" Orientation="Horizontal"  Spacing="20">
+                                <StackLayout BackgroundColor="RoyalBlue">
+                                    <Image   HeightRequest="220" WidthRequest="170"  Source="{Binding Slika, Converter={StaticResource imgConv}}"></Image>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Label Text="Naziv knjige :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                                        <Label Text="{Binding Naziv}" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="End"
+                                               
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                    </StackLayout>
+                                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                                        <Label Text="Ocjena :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                               
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+                                        <Label Text="{Binding OcjenaKnjige}" 
+                                           LineBreakMode="NoWrap"
+                                                VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="18" />
+                                    </StackLayout>
+                                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                                        <Label Text="Kategorije:" 
+                                           LineBreakMode="NoWrap" 
+                                                VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+                                        <Label Text="{Binding Kategorije}" 
+                                           LineBreakMode="NoWrap"
+                                                VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="18" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+
+                                        <Label Text="Autori:" 
+                                           LineBreakMode="NoWrap" 
+                                                VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                                        <Label Text="{Binding Autori}" 
+                                           LineBreakMode="NoWrap"
+                                               VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="18" />
+                                    </StackLayout>
+                                    
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

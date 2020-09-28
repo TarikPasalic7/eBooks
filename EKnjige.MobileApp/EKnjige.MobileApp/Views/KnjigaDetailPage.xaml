@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:converters="clr-namespace:EKnjige.MobileApp.Converters" xmlns:vm="clr-namespace:EKnjige.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Name="ThisPage"
+             x:Class="EKnjige.MobileApp.Views.KnjigaDetailPage">
+
+    <ContentPage.BindingContext>
+        <vm:KnjigaDetailViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+       
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <!--<ColumnDefinition Width="auto"></ColumnDefinition>-->
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="WhiteSmoke">
+             
+
+                <Image   HeightRequest="400" WidthRequest="350"  Source="{Binding EKnjiga.Slika, Converter={StaticResource imgConv}}" ></Image>
+                <Button Command="{Binding KupiCommand}" Text="Kupi"  WidthRequest="50"  BackgroundColor="LightSeaGreen" TextColor="White" FontSize="Large"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1" BackgroundColor="LightSteelBlue" Orientation="Vertical">
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Naziv knjige :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+                    <Label Text="{Binding   EKnjiga.Naziv}"    VerticalTextAlignment="Center" FontSize="Medium">
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Cijena:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding EKnjiga.Cijena}" TextColor="RoyalBlue" FontSize="Medium"
+                         VerticalTextAlignment="Center" >
+                      
+                    </Label>
+                    <Label Text="BAM"   FontSize="20"
+                         
+                            VerticalTextAlignment="Center"
+                           >
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Autor/i:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding EKnjiga.Autori}" FontSize="Medium"
+                           VerticalTextAlignment="Center">
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Ocjena:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding EKnjiga.OcjenaKnjige}" FontSize="Medium"
+                           VerticalTextAlignment="Center">
+
+                    </Label>
+                   
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10" Padding="5" >
+
+                    <Label Text="Opis:" 
+                                           LineBreakMode="NoWrap" 
+                                                VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding Opis}" 
+                                           LineBreakMode="WordWrap"
+                                               VerticalTextAlignment="End"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13"
+                               />
+                </StackLayout>
+
+
+            </StackLayout>
+            <StackLayout Margin="5" Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="RoyalBlue"  >
+                <Label Text="Komentari" TextColor="White" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="0">
+               
+               
+                <Entry Text="{Binding Komentar }">
+                    
+                </Entry>
+               
+                
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="1">
+        
+               
+                    <Button Command="{Binding DodajCommand}" Text="Dodaj"   WidthRequest="40" BackgroundColor="RoyalBlue" TextColor="White" ></Button>
+                
+
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
+                <ListView  ItemsSource="{Binding KomentariList}" SelectedItem="{Binding SelectedKomentar}"   >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout Padding="10" Orientation="Horizontal" Spacing="20" Grid.Row="3" Grid.Column="0" >
+                                  
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding komentar}" 
+                                           LineBreakMode="MiddleTruncation" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="18"
+                                               TextColor="Black"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding  DatumKomentara}" 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13" />
+                                            <Label Text="{Binding Klijent.KorisnickoIme} " 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13" />
+                                        </StackLayout>
+                                       
+                                    
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal"  Grid.Row="3" Grid.Column="1" >
+                                        <Button  Clicked="Button_Clicked" Text="Obrisi" BackgroundColor="RoyalBlue" TextColor="White">
+
+                                        </Button>
+                                    </StackLayout>
+                                    <!--Command="{Binding Source={x:Reference ThisPage},Path=BindingContext.ObrisiCommand()}"-->
+                         
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

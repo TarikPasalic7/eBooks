@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA968000-FE54-49E0-AAAF-BF8FD19A4AB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>eKnjige.WinUI</RootNamespace>
+    <AssemblyName>eKnjige.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.8.2\lib\net40\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.4.2\lib\net46\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIService.cs" />
+    <Compile Include="Autori\FormDodajAutora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autori\FormDodajAutora.Designer.cs">
+      <DependentUpon>FormDodajAutora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drzave\FormDodajDrzavu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drzave\FormDodajDrzavu.Designer.cs">
+      <DependentUpon>FormDodajDrzavu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIndex.Designer.cs">
+      <DependentUpon>FormIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gradovi\FormDodajGrad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gradovi\FormDodajGrad.Designer.cs">
+      <DependentUpon>FormDodajGrad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kategorije\FormDodajKategoriju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kategorije\FormDodajKategoriju.Designer.cs">
+      <DependentUpon>FormDodajKategoriju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klijenti\FormKlijenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijenti\FormKlijenti.Designer.cs">
+      <DependentUpon>FormKlijenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klijenti\FormKlijentiDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijenti\FormKlijentiDetalji.Designer.cs">
+      <DependentUpon>FormKlijentiDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Knjige\FormEknjigeDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knjige\FormEknjigeDodaj.Designer.cs">
+      <DependentUpon>FormEknjigeDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Knjige\FormKnjige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knjige\FormKnjige.Designer.cs">
+      <DependentUpon>FormKnjige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Knjige\FormKomentariKnjige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knjige\FormKomentariKnjige.Designer.cs">
+      <DependentUpon>FormKomentariKnjige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komentari\FormKomentari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komentari\FormKomentari.Designer.cs">
+      <DependentUpon>FormKomentari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijedlozi\FormPrijedlozi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijedlozi\FormPrijedlozi.Designer.cs">
+      <DependentUpon>FormPrijedlozi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Autori\FormDodajAutora.resx">
+      <DependentUpon>FormDodajAutora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drzave\FormDodajDrzavu.resx">
+      <DependentUpon>FormDodajDrzavu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIndex.resx">
+      <DependentUpon>FormIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gradovi\FormDodajGrad.resx">
+      <DependentUpon>FormDodajGrad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kategorije\FormDodajKategoriju.resx">
+      <DependentUpon>FormDodajKategoriju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijenti\FormKlijenti.resx">
+      <DependentUpon>FormKlijenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijenti\FormKlijentiDetalji.resx">
+      <DependentUpon>FormKlijentiDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knjige\FormEknjigeDodaj.resx">
+      <DependentUpon>FormEknjigeDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knjige\FormKnjige.resx">
+      <DependentUpon>FormKnjige.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knjige\FormKomentariKnjige.resx">
+      <DependentUpon>FormKomentariKnjige.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komentari\FormKomentari.resx">
+      <DependentUpon>FormKomentari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijedlozi\FormPrijedlozi.resx">
+      <DependentUpon>FormPrijedlozi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eKnjige.Model\eKnjige.Model.csproj">
+      <Project>{292da331-72ee-42e4-945c-bdebea0b1100}</Project>
+      <Name>eKnjige.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EKnjige.png" />
+    <Content Include="Prijedlozi.png" />
+    <Content Include="users.png" />
+    <None Include="Resources\User.png" />
+    <Content Include="User.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

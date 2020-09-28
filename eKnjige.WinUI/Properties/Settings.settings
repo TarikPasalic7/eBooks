@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="eKnjige.WinUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="APIurl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:58998/api</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

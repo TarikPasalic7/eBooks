@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:EKnjige.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EKnjige.MobileApp.Views.RegistracijaPage">
+
+    <ContentPage.BindingContext>
+        <vm:RegistracijaViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="7" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+<!--TextChanged="ime_changed"-->
+            <Label Text="Ime :" />
+            <Entry  x:Name="Ime"  TextChanged="ime_changed" Text="{Binding Ime}" ReturnType="Next" Unfocused="ime_unfocused"></Entry>
+            <Label x:Name="ErrorLabel_Ime"  IsVisible="{Binding IsError_Ime}"  TextColor="Red" FontSize="13" />
+            <Label Text="Prezime :" />
+            <Entry x:Name="Prezime" Text="{Binding Prezime}" TextChanged="prezime_changed"  Unfocused="prezime_unfocused" ReturnType="Next"></Entry>
+            <Label x:Name="ErrorLabel_Prezime"  IsVisible="{Binding IsError_Prezime}"  TextColor="Red" FontSize="13" />
+            <Label Text="Korisničko Ime :" />
+            <Entry x:Name="KorisnickoIme" Text="{Binding KorisnickoIme}" TextChanged="korisnickoime_changed"  Unfocused="korisnickoime_unfocused"></Entry>
+            <Label x:Name="ErrorLabel_KorisnickoIme"  IsVisible="{Binding IsError_KorisnickoIme}"  TextColor="Red" FontSize="13" />
+            <Label Text="Email :" />
+            <Entry x:Name="Email" Text="{Binding Email}" TextChanged="email_changed"  Unfocused="email_unfocused"></Entry>
+            <Label x:Name="ErrorLabel_Email"  IsVisible="{Binding IsError_Email}"  TextColor="Red" FontSize="13" />
+            <Label Text="Datum Rodenja :" />
+            <Entry x:Name="Datum" Text="{Binding DatumRodenja}" TextChanged="datum_changed"  Unfocused="datum_unfocused" ></Entry>
+            <Label x:Name="ErrorLabel_Datum"  IsVisible="{Binding IsError_Datum}"  TextColor="Red" FontSize="13" />
+            <Label Text="Lozinka :"/>
+            <Entry x:Name="Lozinka" Text="{Binding Lozinka}" IsPassword="True" TextChanged="lozinka_changed"  Unfocused="lozinka_unfocused"></Entry>
+            <Label x:Name="ErrorLabel_Lozinka"  IsVisible="{Binding IsError_Lozinka}"  TextColor="Red" FontSize="13" />
+            <Label Text="Lozinka Provjera :"/>
+            <Entry x:Name="Lozinkap" Text="{Binding LozinkaProvjera}" IsPassword="True" TextChanged="lozinkap_changed"  Unfocused="lozinkap_unfocused"></Entry>
+            <Label x:Name="ErrorLabel_LozinkaProvjera"  IsVisible="{Binding IsError_LozinkaProvjera}"  TextColor="Red" FontSize="13" />
+            <Label Text="Grad :"/>
+            <Picker ItemsSource="{Binding GradoviList}" SelectedItem="{Binding SelectedGrad}" ItemDisplayBinding="{Binding Naziv}"></Picker>
+            <Label Text="Spol :"/>
+            <Picker ItemsSource="{Binding SpolList}" SelectedItem="{Binding SelectedSpol}" ItemDisplayBinding="{Binding Tip}"></Picker>
+
+            <Button Command="{Binding RegistracijaCommand}" Text="Registracija"
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"></Button>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:EKnjige.MobileApp.ViewModels" xmlns:converters="clr-namespace:EKnjige.MobileApp.Converters"
+             mc:Ignorable="d"
+             x:Class="EKnjige.MobileApp.Views.ProfilKnjigaPage">
+    <ContentPage.BindingContext>
+        <vm:ProfilKnjigaViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <!--<ColumnDefinition Width="auto"></ColumnDefinition>-->
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0">
+
+
+                <Image   HeightRequest="400" WidthRequest="350"  Source="{Binding EKnjiga.Slika, Converter={StaticResource imgConv}}" BackgroundColor="RoyalBlue"></Image>
+
+                <Button Command="{Binding PlayCommand}" Text="MP3"   WidthRequest="40" BackgroundColor="RoyalBlue" TextColor="White" ></Button>
+                <Button Command="{Binding StopCommand}" Text="MP3"   WidthRequest="40" BackgroundColor="RoyalBlue" TextColor="White" ></Button>
+                <Button  Clicked="Button_Clicked" Text="PDF"   WidthRequest="40" BackgroundColor="RoyalBlue" TextColor="White" ></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1" BackgroundColor="LightSteelBlue" Orientation="Vertical">
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Naziv knjige :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+                    <Label Text="{Binding   EKnjiga.Naziv}"    VerticalTextAlignment="Center" FontSize="Medium">
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Cijena:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding EKnjiga.Cijena}" TextColor="RoyalBlue" FontSize="Medium"
+                         VerticalTextAlignment="Center" >
+
+                    </Label>
+                    <Label Text="BAM"   FontSize="20"
+                         
+                            VerticalTextAlignment="Center"
+                           >
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Autor/i:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding EKnjiga.Autori}" FontSize="Medium"
+                           VerticalTextAlignment="Center">
+
+                    </Label>
+                </StackLayout>
+                <StackLayout Spacing="10" Padding="5" Orientation="Horizontal" >
+                    <Label Text="Ocjena:" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                    <Label Text="{Binding EKnjiga.OcjenaKnjige}" FontSize="Medium"
+                           VerticalTextAlignment="Center">
+
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Padding="0,4,0,0" >
+                <ImageButton                    
+                            Command="{Binding OcijeniStarCommand}"
+                            BackgroundColor="Transparent"
+                            Source="{Binding Star1.Slika}"
+                            WidthRequest="32"
+                            CommandParameter="1"
+                            />
+                <ImageButton                    
+                            Command="{Binding OcijeniStarCommand}"
+                            BackgroundColor="Transparent"
+                            Source="{Binding Star2.Slika}" 
+                            WidthRequest="32"
+                            CommandParameter="2"
+                            />
+                <ImageButton                    
+                            Command="{Binding OcijeniStarCommand}"
+                            BackgroundColor="Transparent"
+                            Source="{Binding Star3.Slika}" 
+                            WidthRequest="32"
+                            CommandParameter="3"
+                            />
+                <ImageButton                    
+                            Command="{Binding OcijeniStarCommand}"
+                            BackgroundColor="Transparent"
+                            Source="{Binding Star4.Slika}" 
+                            WidthRequest="32"
+                            CommandParameter="4"
+                            />
+                <ImageButton                    
+                            Command="{Binding OcijeniStarCommand}"
+                            BackgroundColor="Transparent"
+                            Source="{Binding Star5.Slika}" 
+                            WidthRequest="32"
+                            CommandParameter="5"
+                            />
+                </StackLayout>
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2">
+                <StackLayout BackgroundColor="RoyalBlue" >
+                    <Label Text="Preporuka drugih knjiga " FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"></Label>
+                </StackLayout>
+                <ListView ItemsSource="{Binding PreporuceneKnjigeList}" ItemSelected="ListView_ItemSelected"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="RoyalBlue">
+                                        <Image Source="{Binding Slika, Converter={StaticResource imgConv}}" HeightRequest="220" WidthRequest="170" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical" Spacing="20">
+                                        <StackLayout Orientation="Horizontal" >
+                                            <Label Text="Naziv knjige :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+
+                                            <Label Text="{Binding Naziv}" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                               
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Ocjena :" 
+                                           LineBreakMode="NoWrap" 
+                                           VerticalTextAlignment="Center"
+                                               
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="21" />
+                                            <Label Text="{Binding OcjenaKnjige}" 
+                                           LineBreakMode="NoWrap"
+                                                VerticalTextAlignment="Center"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="18" />
+                                        </StackLayout>
+                                       
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </Grid>
+        
+        
+
+    </ContentPage.Content>
+</ContentPage>
