@@ -607,8 +607,11 @@
     <AppxPackagedFile Include="C:\Users\pc\.nuget\packages\coding4fun.toolkit.controls\2.1.8\lib\netcore451\Coding4Fun.Toolkit.Controls\Themes\Generic.xbf">
       <PackagePath>Coding4Fun.Toolkit.Controls\Themes\Generic.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\cartv.png">
+      <PackagePath>cartv.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\nba.png">
+      <PackagePath>nba.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -738,6 +741,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\cancel.png">
       <PackagePath>cancel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\EKnjige.MobileApp.UWP.xr.xml">
       <PackagePath>EKnjige.MobileApp.UWP.xr.xml</PackagePath>

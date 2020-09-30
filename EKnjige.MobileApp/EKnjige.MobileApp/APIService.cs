@@ -52,8 +52,13 @@ namespace EKnjige.MobileApp
                 url += await search.ToQueryString();
 
             }
-           
-            if (route == "Grad" || route == "Spol")
+            if (!string.IsNullOrEmpty(actionName))
+            {
+                return await url.WithBasicAuth(username, password).GetJsonAsync<T>();
+
+            }
+
+            if (route == "Grad" || route == "Spol" || route == "Klijenti")
             {
                 return await url.GetJsonAsync<T>();
             }

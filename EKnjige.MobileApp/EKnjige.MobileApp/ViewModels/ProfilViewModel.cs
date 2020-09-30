@@ -111,8 +111,8 @@ namespace EKnjige.MobileApp.ViewModels
                 {
 
                     if (APIService.PrijavljeniKorisnik.KlijentID == kk.KlijentID && e.EKnjigaID == kk.EKnjigaID)
-                    { 
-                        
+                    {
+                        e.OcjenaKnjige = (float)Math.Round(e.OcjenaKnjige * 10f) / 10f;
                         KnjigaList.Add(e);
 
                     }

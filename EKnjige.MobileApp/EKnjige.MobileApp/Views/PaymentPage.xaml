@@ -62,7 +62,7 @@
                                        Keyboard="Keyboard.Numeric"/>
                     <Label x:Name="ErrorLabel_Year"  IsVisible="{Binding IsError_Year}"  TextColor="Red" FontSize="13"/>
                 </StackLayout>
-               
+
                 <StackLayout Grid.Row="2" Grid.ColumnSpan="2">
                     <Entry x:Name="Cvv" Placeholder="  Cvv code" Text="{Binding Cvc}" TextChanged="Cvv_changed" Unfocused="Cvv_unfocused" ReturnType="Next" 
                                        Keyboard="Keyboard.Numeric"/>
@@ -71,7 +71,7 @@
 
             </Grid>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="End" >
-                <Button x:Name="Submit_Button" BorderRadius="0"  Text="Submit" Command="{Binding  SubmitCommand}" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"/>
+                <Button x:Name="Submit_Button" BorderRadius="0"  Text="Submit" Command="{Binding  SubmitCommand}" BackgroundColor="RoyalBlue" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"/>
             </StackLayout>
         </StackLayout>
     </ContentView>

@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=362364c7-5244-48ff-8366-66380dc04559</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>3D2E9BE245EC277FB70AD9D2780C91A18C3068AA8EEC18894F8DFB76403902AA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>239c9df9-81d0-4a96-b1a3-e158a33c9614_1.0.0.0_x86__a083hdpdgjakg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>239c9df9-81d0-4a96-b1a3-e158a33c9614_a083hdpdgjakg!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-28T17:01:02.449</Modified>
+      <Modified>2020-09-30T15:33:10.788</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\EKnjige.MobileApp.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\EKnjige.MobileApp.UWP.exe">
       <PackagePath>entrypoint\EKnjige.MobileApp.UWP.exe</PackagePath>
-      <Modified>2020-09-28T17:00:43.836</Modified>
+      <Modified>2020-09-30T15:33:05.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\.nuget\packages\acr.userdialogs\7.1.0.446\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -778,13 +778,13 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2019-12-09T23:29:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp\bin\Debug\netstandard2.0\EKnjige.MobileApp.dll">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp\bin\Debug\netstandard2.0\EKnjige.MobileApp.dll">
       <PackagePath>EKnjige.MobileApp.dll</PackagePath>
-      <Modified>2020-09-28T17:00:32.820</Modified>
+      <Modified>2020-09-30T15:48:29.472</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp\bin\Debug\netstandard2.0\eKnjige.Model.dll">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp\bin\Debug\netstandard2.0\eKnjige.Model.dll">
       <PackagePath>eKnjige.Model.dll</PackagePath>
-      <Modified>2020-09-28T17:00:28.292</Modified>
+      <Modified>2020-09-30T15:32:25.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -810,188 +810,196 @@
       <PackagePath>Coding4Fun.Toolkit.Controls\Themes\Generic.xbf</PackagePath>
       <Modified>2016-05-12T13:21:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-04-26T15:18:23.263</Modified>
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\cartv.png">
+      <PackagePath>cartv.png</PackagePath>
+      <Modified>2020-09-30T15:31:24.223</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\nba.png">
+      <PackagePath>nba.png</PackagePath>
+      <Modified>2020-09-30T15:32:15.521</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.204</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.206</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.209</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.210</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.216</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.217</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.219</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.221</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.223</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.225</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.227</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.229</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.230</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.232</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.237</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.239</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.240</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.242</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.244</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.245</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.247</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.249</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.251</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.252</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.256</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.258</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-26T15:18:23.260</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\star_empty.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\star_empty.png">
       <PackagePath>star_empty.png</PackagePath>
-      <Modified>2020-03-02T22:13:36.993</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\star_emptyinside.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\star_emptyinside.png">
       <PackagePath>star_emptyinside.png</PackagePath>
-      <Modified>2020-03-02T22:13:36.997</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\star_filled.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\star_filled.png">
       <PackagePath>star_filled.png</PackagePath>
-      <Modified>2020-03-02T22:13:37.005</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\xamarin_logo.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
-      <Modified>2020-04-26T15:18:23.597</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\add.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\add.png">
       <PackagePath>add.png</PackagePath>
-      <Modified>2020-04-26T15:18:23.566</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\save.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\save.png">
       <PackagePath>save.png</PackagePath>
-      <Modified>2020-04-26T15:18:23.594</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\cancel.png">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\cancel.png">
       <PackagePath>cancel.png</PackagePath>
-      <Modified>2020-04-26T15:18:23.568</Modified>
+      <Modified>2020-08-19T22:08:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\EKnjige.MobileApp.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2020-08-19T22:08:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\EKnjige.MobileApp.UWP.xr.xml">
       <PackagePath>EKnjige.MobileApp.UWP.xr.xml</PackagePath>
-      <Modified>2020-04-26T15:30:09.140</Modified>
+      <Modified>2020-09-29T16:11:49.426</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf">
       <PackagePath>Microsoft.UI.Xaml\DensityStyles\Compact.xbf</PackagePath>
-      <Modified>2020-09-28T17:00:43.456</Modified>
+      <Modified>2020-09-30T15:33:05.612</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-09-28T17:00:43.456</Modified>
+      <Modified>2020-09-30T15:33:05.612</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-09-28T17:00:43.456</Modified>
+      <Modified>2020-09-30T15:33:05.612</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -1005,13 +1013,13 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2019-06-07T09:59:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-09-28T17:00:48.940</Modified>
+      <Modified>2020-09-30T15:33:09.236</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pc\Eknjige\eKnjige.WebaAPI\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\Core\EKnjige.MobileApp.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\pc\eBooks\EKnjige.MobileApp\EKnjige.MobileApp.UWP\bin\x86\Debug\Core\EKnjige.MobileApp.UWP.exe">
       <PackagePath>EKnjige.MobileApp.UWP.exe</PackagePath>
-      <Modified>2020-09-28T17:01:02.119</Modified>
+      <Modified>2020-09-30T15:33:10.781</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

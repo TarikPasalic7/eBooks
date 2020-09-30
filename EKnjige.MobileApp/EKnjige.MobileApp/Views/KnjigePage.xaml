@@ -17,19 +17,35 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Knjige"
+            <StackLayout Orientation="Horizontal">
+                <Label Text="E-Knjige Shop"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
                    Padding="0,20,0,0"
-                   FontSize="Header"
-                   TextColor="RoyalBlue"
+                   FontSize="35"
+                   TextColor="Black"
                    FontAttributes="Bold"/>
-            <Picker ItemsSource="{Binding KategorijaList}" SelectedItem="{Binding SelectedKategorija}" ItemDisplayBinding="{Binding Naziv}"></Picker>
-            <ListView ItemsSource="{Binding KnjigaList}" ItemSelected="ListView_ItemSelected">
+                <Image   VerticalOptions="EndAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                  HeightRequest="80" WidthRequest="70"  Source="cartv.png"></Image>
+            </StackLayout>
+            <SearchBar TextChanged="SearchBar_TextChanged"></SearchBar>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Label Text="Kategorije:" 
+                   FontSize="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                       Margin="5"
+                       VerticalTextAlignment="End"/>
+
+                <Picker x:Name="Knjigelist" ItemsSource="{Binding KategorijaList}" SelectedItem="{Binding SelectedKategorija}" ItemDisplayBinding="{Binding Naziv}" WidthRequest="250" HorizontalOptions="CenterAndExpand" ></Picker>
+            </StackLayout>
+
+            <ListView ItemsSource="{Binding KnjigaList}" ItemSelected="ListView_ItemSelected" BackgroundColor="WhiteSmoke">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                          
+
                             <StackLayout Padding="10" Orientation="Horizontal"  Spacing="20">
                                 <StackLayout BackgroundColor="RoyalBlue">
                                     <Image   HeightRequest="220" WidthRequest="170"  Source="{Binding Slika, Converter={StaticResource imgConv}}"></Image>
@@ -88,7 +104,7 @@
                                            Style="{DynamicResource ListItemDetailTextStyle}"
                                            FontSize="18" />
                                     </StackLayout>
-                                    
+
 
                                 </StackLayout>
 

@@ -146,7 +146,7 @@ namespace EKnjige.MobileApp.ViewModels
                 options.ReceiptEmail =korisnik.Email.ToString();
                 var service = new ChargeService();
                 Charge charge = service.Create(options);
-                UserDialogs.Instance.Alert("Uspješno ste platili knjigu.");
+                UserDialogs.Instance.Alert("Uspješno ste kupili knjigu.");
                 return true;
             }
             catch (Exception ex)

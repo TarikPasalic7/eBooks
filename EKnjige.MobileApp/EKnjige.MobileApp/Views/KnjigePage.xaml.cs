@@ -34,5 +34,74 @@ namespace EKnjige.MobileApp.Views
             var item = e.SelectedItem as EknjigaMobile;
             await Navigation.PushAsync(new KnjigaDetailPage(item));
         }
+
+        private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            APIService api = new APIService("eknjiga");
+            APIService _serviceKnjigeAutor = new APIService("EKnjigaAutor");
+            APIService _serviceEknjigeKategorija = new APIService("EKnjigaKategorija");
+            APIService _serviceKategorije = new APIService("Kategorija");
+            APIService _serviceAutori = new APIService("Autor");
+            List<EknjigaMobile> list = new List<EknjigaMobile>(model.KnjigaList);
+            if (!string.IsNullOrEmpty(e.NewTextValue))
+            {
+                foreach (var k in list)
+                {
+                    if (!k.Naziv.Contains(e.NewTextValue))
+                        model.KnjigaList.Remove(k);
+
+                }
+
+            }
+            else
+            {
+                var klist = await api.get<List<EknjigaMobile>>(null);
+                var eknjigaautorilist = await _serviceKnjigeAutor.get<List<EKnjigeAutor>>(null);
+                var eknjigakategorijaList = await _serviceEknjigeKategorija.get<List<EKnjigaKategorija>>(null);
+                foreach (var k in klist)
+                {
+
+                    foreach (var kk in eknjigakategorijaList)
+                    {
+
+                        if (kk.EKnjigaID == k.EKnjigaID)
+                        {
+                            var kategorija = await _serviceKategorije.getbyId<Kategorija>(kk.KategorijaID);
+
+                            k.Kategorije += kategorija.Naziv;
+                            k.Kategorije += "  ";
+                        }
+                    }
+
+
+                }
+                foreach (var k in klist)
+                {
+
+                    foreach (var ea in eknjigaautorilist)
+                    {
+
+                        if (ea.EKnjigaID == k.EKnjigaID)
+                        {
+                            var autor = await _serviceAutori.getbyId<Autor>(ea.AutorID);
+
+                            k.Autori += autor.Ime + " " + autor.Prezime + ",";
+                        }
+                    }
+
+
+                }
+
+                foreach (var k in klist)
+                {
+                    k.OcjenaKnjige = (float)Math.Round(k.OcjenaKnjige * 10f) / 10f;
+                    model.KnjigaList.Add(k);
+
+                }
+                //await model.Init();
+            }
+        }
+
     }
 }

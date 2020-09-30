@@ -10,14 +10,34 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content >
-        <StackLayout Padding="7"  Spacing="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-            <Label Text="Korisničko Ime :" />
-            <Entry Text="{Binding KorisnickoIme}"></Entry>
-            <Label Text="Password :"/>
-            <Entry  Text="{Binding Lozinka}" IsPassword="True"></Entry>
-            <Button Command="{Binding LoginCommand}" Text="Login" BackgroundColor="MediumPurple" TextColor="White"></Button>
-            <Label IsVisible="{Binding IsBusy}" Text="..."/>
-            <Button Command="{Binding RegistracijaCommand}" Text="Registruj se" BackgroundColor="MediumPurple" TextColor="White"></Button>
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <!--<ColumnDefinition Width="*"></ColumnDefinition>-->
+                <!--<ColumnDefinition Width="auto"></ColumnDefinition>-->
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Padding="7"  Spacing="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <Image   VerticalOptions="EndAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                  HeightRequest="350" WidthRequest="280"  Source="nba.png"></Image>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" Padding="7" Spacing="12"  VerticalOptions="EndAndExpand">
+                <Label Text="Korisničko Ime :" />
+                <Entry Text="{Binding KorisnickoIme}"></Entry>
+                <Label Text="Password :"/>
+                <Entry  Text="{Binding Lozinka}" IsPassword="True"></Entry>
+                <Button Command="{Binding LoginCommand}" Text="Login" BackgroundColor="RoyalBlue" TextColor="White"></Button>
+                <Label IsVisible="{Binding IsBusy}" Text="..."/>
+                <Button Command="{Binding RegistracijaCommand}" Text="Registruj se" BackgroundColor="RoyalBlue" TextColor="White"></Button>
+            </StackLayout>
+
+
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

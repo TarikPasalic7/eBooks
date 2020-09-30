@@ -15,21 +15,22 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-        
+        <StackLayout Spacing="10">
+
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
                 <Label Text="Korisnik :"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
-                   FontSize="Header"
+                   FontSize="Medium"
                        VerticalTextAlignment="Center"/>
-                <Label Text="{Binding KorisnickoIme}" FontSize="Header" FontAttributes="Bold" TextColor="RoyalBlue" VerticalTextAlignment="Center" >
+                <Label Text="{Binding KorisnickoIme}" FontSize="Medium" FontAttributes="Bold" TextColor="RoyalBlue" VerticalTextAlignment="Center" >
 
                 </Label>
-            </StackLayout>
-         
 
-            <ListView ItemsSource="{Binding KnjigaList}" ItemSelected="ListView_ItemSelected" >
+            </StackLayout>
+
+
+            <ListView ItemsSource="{Binding KnjigaList}" ItemSelected="ListView_ItemSelected"  BackgroundColor="WhiteSmoke">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -37,6 +38,8 @@
                             <StackLayout Padding="10" Orientation="Horizontal" Spacing="20">
                                 <StackLayout Padding="10">
                                     <Image   HeightRequest="220" WidthRequest="170"  Source="{Binding Slika, Converter={StaticResource imgConv}}" BackgroundColor="RoyalBlue"></Image>
+
+
                                 </StackLayout>
                                 <StackLayout Orientation="Vertical" >
                                     <StackLayout Orientation="Horizontal" Spacing="10">
@@ -96,7 +99,7 @@
                                 </StackLayout>
 
                             </StackLayout>
-                            
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

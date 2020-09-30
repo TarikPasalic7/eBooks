@@ -33,4 +33,3 @@ C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.Assembly
 C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.csproj.CoreCompileInputs.cache
 C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.dll
 C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.pdb
-C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.csprojAssemblyReference.cache

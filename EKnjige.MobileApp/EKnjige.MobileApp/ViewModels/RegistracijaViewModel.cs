@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -131,26 +132,82 @@ namespace EKnjige.MobileApp.ViewModels
 
         async Task Registracija()
         {
-
-            var request = new KlijentInsertRequest
+            KlijentInsertRequest request = null;
+            bool goodreq = true;
+            if (datumrodjenja == null || SelectedSpol == null || email == null || ime == null || prezime == null || korisnickoime == null || lozinka == null || lozinkaprovjera == null || _SelectedGrad == null)
             {
-                DatumRodenja = datumrodjenja,
-                SpolID = SelectedSpol.SpolID,
-                Email = email,
-                Ime = ime,
-                Prezime = prezime,
-                KorisnickoIme = korisnickoime,
-                LozinkaHash = lozinka,
-                LozinkaProvjera = lozinkaprovjera,
-                GradID = SelectedGrad.Id,
-                UlogaId=2,
-                
+                await App.Current.MainPage.DisplayAlert("Obavijest", "Niste popunili sva polja", "OK");
+                goodreq = false;
+            }
+            if (goodreq == true)
+            {
+                request = new KlijentInsertRequest
+                {
+
+                    DatumRodenja = datumrodjenja,
+                    SpolID = SelectedSpol.SpolID,
+                    Email = email,
+                    Ime = ime,
+                    Prezime = prezime,
+                    KorisnickoIme = korisnickoime,
+                    LozinkaHash = lozinka,
+                    LozinkaProvjera = lozinkaprovjera,
+                    GradID = SelectedGrad.Id,
+                    UlogaId = 2,
 
 
 
-            };
 
-           var novikorisnik= await _service.Insert<Klijent>(request);
+                };
+            }
+
+            Klijent novikorisnik = null;
+            if (request != null)
+            {
+                bool greska = false;
+                var hasNumber = new Regex(@"[0-9]+");
+                var hasUpperChar = new Regex(@"[A-Z]+");
+                var hasMinimum8Chars = new Regex(@".{8,}");
+                if (!hasNumber.IsMatch(request.LozinkaHash) || !hasUpperChar.IsMatch(request.LozinkaHash) || !hasMinimum8Chars.IsMatch(request.LozinkaHash))
+                {
+                    await App.Current.MainPage.DisplayAlert("Obavijest", "Lozinka mora imati brojeve,velika slova i minimum 8 karaktera", "OK");
+                    greska = true;
+                }
+                if (request.LozinkaHash != request.LozinkaProvjera)
+                {
+                    await App.Current.MainPage.DisplayAlert("Obavijest", "Lozinke nisu iste ", "OK");
+                    greska = true;
+                }
+
+                var korisnici = await _service.get<List<Klijent>>(null);
+                foreach (var k in korisnici)
+                {
+                    if (k.KorisnickoIme == request.KorisnickoIme)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Obavijest", "Korisnicko ime  već postoji", "OK");
+                        greska = true;
+                        break;
+                    }
+
+
+                }
+                foreach (var k in korisnici)
+                {
+                    if (k.Email == request.Email)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Obavijest", "Email je već iskorišten", "OK");
+                        greska = true;
+                        break;
+                    }
+
+
+                }
+
+                if (greska != true)
+                    novikorisnik = await _service.Insert<Klijent>(request);
+
+            }
+
 
             if (novikorisnik != null)
             {
@@ -164,7 +221,7 @@ namespace EKnjige.MobileApp.ViewModels
             {
                 await App.Current.MainPage.DisplayAlert("Obavijest", "Registracija nije uspjela", "OK");
             }
-           
+
         }
 
 
@@ -192,11 +249,6 @@ namespace EKnjige.MobileApp.ViewModels
                     SpolList.Add(spol);
                 }
             }
-
-           
-
-
-
 
         }
     }

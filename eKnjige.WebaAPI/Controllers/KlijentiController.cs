@@ -25,7 +25,7 @@ namespace eKnjige.WebaAPI.Controllers
             _service = service;
         }
 
-        [Authorize]
+        
         [HttpGet]
         public List<Model.Klijent> Get([FromQuery] Model.Requests.KlijentiSearchRequest request)
         {

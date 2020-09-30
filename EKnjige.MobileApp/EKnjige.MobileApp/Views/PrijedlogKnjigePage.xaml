@@ -11,13 +11,16 @@
         <vm:PrijedlogKnjigeViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        
-        <StackLayout Padding="7" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+        <StackLayout Spacing="10" Padding="7" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Image   VerticalOptions="EndAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                  HeightRequest="300" WidthRequest="220"  Source="nba.png"></Image>
             <Label Text=" Autor :" />
             <Entry Text="{Binding Autor}"></Entry>
             <Label Text="Naziv Knjige:"/>
             <Entry  Text="{Binding Naziv}" ></Entry>
-            <Button Command="{Binding  DodajCommand}" Text="Predloži" BackgroundColor="MediumPurple" TextColor="AliceBlue"></Button>
+            <Button Command="{Binding  DodajCommand}" Text="Predloži" BackgroundColor="RoyalBlue" TextColor="AliceBlue" VerticalOptions="EndAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

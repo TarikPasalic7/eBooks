@@ -77,7 +77,7 @@ namespace EKnjige.MobileApp.ViewModels
             }
             catch(Exception ex)
             {
-                //System.Windows.Forms.MessageBox.Show(ex.Message, "Authentikacija", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                await App.Current.MainPage.DisplayAlert("Obavijest", "Unijeli ste pogrešnu lozinku ili korisnicko ime", "OK");
             }
         }
     }

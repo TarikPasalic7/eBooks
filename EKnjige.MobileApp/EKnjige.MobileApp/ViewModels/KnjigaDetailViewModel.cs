@@ -15,6 +15,7 @@ namespace EKnjige.MobileApp.ViewModels
     {
         
         private readonly APIService _servicekomentari = new APIService("Komentar");
+        private readonly APIService _service = new APIService("Klijenti");
 
         public KnjigaDetailViewModel()
         {
@@ -102,16 +103,19 @@ namespace EKnjige.MobileApp.ViewModels
 
         {
             KomentariList.Clear();
-            List<Komentar> komentari= await _servicekomentari.get<List<Komentar>>(null);
+            List<Komentar> komentari = await _servicekomentari.get<List<Komentar>>(null);
 
-            foreach(var k in komentari)
+            foreach (var k in komentari)
             {
 
-                if(k.EKnjigaID==EKnjiga.EKnjigaID)
+                if (k.EKnjigaID == EKnjiga.EKnjigaID)
                 {
+                    k.Klijent = await _service.getbyId<Klijent>(k.KlijentID);
                     KomentariList.Add(k);
+
                 }
             }
+
 
 
         }

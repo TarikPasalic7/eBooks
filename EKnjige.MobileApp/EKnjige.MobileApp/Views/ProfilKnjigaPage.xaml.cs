@@ -30,6 +30,15 @@ namespace EKnjige.MobileApp.Views
         {
             base.OnAppearing();
             await model.Init();
+            if (model.EKnjiga.Pdffile == null)
+                pdf.IsVisible = false;
+            if (model.EKnjiga.Mp3file == null)
+            {
+                play.IsVisible = false;
+                stop.IsVisible = false;
+
+            }
+
         }
 
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

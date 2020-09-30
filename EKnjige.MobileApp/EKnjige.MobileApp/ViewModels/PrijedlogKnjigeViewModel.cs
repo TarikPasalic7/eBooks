@@ -59,6 +59,13 @@ namespace EKnjige.MobileApp.ViewModels
 
         public async  Task DodajPrijedlog()
         {
+            if (string.IsNullOrEmpty(Autor) || string.IsNullOrEmpty(Naziv))
+            {
+                await App.Current.MainPage.DisplayAlert("Obavijest", "Morate popuniti sva polja", "OK");
+                return;
+
+            }
+
 
             PrijedlogKnjigaRequest request = new PrijedlogKnjigaRequest()
             {

@@ -13,7 +13,7 @@
     <ContentPage.Content>
         <StackLayout Padding="7" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
 
-<!--TextChanged="ime_changed"-->
+            <!--TextChanged="ime_changed"-->
             <Label Text="Ime :" />
             <Entry  x:Name="Ime"  TextChanged="ime_changed" Text="{Binding Ime}" ReturnType="Next" Unfocused="ime_unfocused"></Entry>
             <Label x:Name="ErrorLabel_Ime"  IsVisible="{Binding IsError_Ime}"  TextColor="Red" FontSize="13" />
@@ -40,10 +40,10 @@
             <Label Text="Spol :"/>
             <Picker ItemsSource="{Binding SpolList}" SelectedItem="{Binding SelectedSpol}" ItemDisplayBinding="{Binding Tip}"></Picker>
 
-            <Button Command="{Binding RegistracijaCommand}" Text="Registracija"
-                    BackgroundColor="MediumPurple"
+            <Button Command="{Binding RegistracijaCommand}"  Text="Registracija"
+                    BackgroundColor="RoyalBlue"
                     TextColor="White"></Button>
-           
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
