@@ -53,26 +53,104 @@ namespace eKnjige.WinUI.Klijenti
                 request.GradID = (cmbGradovi.SelectedItem as Model.Grad).Id;
                 request.SpolID = (cmbSpol.SelectedItem as Model.Spol).SpolID;
                 request.UlogaId = (cmbUloga.SelectedItem as Model.Uloga).UlogaId;
-        
 
 
+
+                var klijenti = await service.get<List<Klijent>>(null);
 
 
                 if (id.HasValue)
                 {
+                    var klijent = await service.getbyId<Klijent>(id);
+                    bool greska = false;
+                    bool greska2 = false;
+
+
+
+                    foreach (var k in klijenti)
+                    {
+
+                        if (k.Email == textEmail.Text && k.Email != klijent.Email)
+                        {
+                            greska = true;
+                            break;
+
+                        }
+                        if (k.KorisnickoIme == textKorisnickoIme.Text && k.KorisnickoIme != klijent.KorisnickoIme)
+                        {
+                            greska2 = true;
+                            break;
+
+                        }
+
+                    }
+                    if (greska == true)
+                    {
+                        MessageBox.Show("Email je vec iskorišten");
+                        return;
+
+                    }
+                    if (greska2 == true)
+                    {
+                        MessageBox.Show("Korisnicko ime je vec iskorišteno");
+                        return;
+
+                    }
+
                     await service.Update<Model.Klijent>(id, request);
+                    MessageBox.Show("Operacija uspjesna");
+                    Close();
+
+
 
                 }
                 else
                 {
+                    bool greska = false;
+                    bool greska2 = false;
+
+
+
+                    foreach (var k in klijenti)
+                    {
+
+                        if (k.Email == textEmail.Text)
+                        {
+                            greska = true;
+                            break;
+
+                        }
+                        if (k.KorisnickoIme == textKorisnickoIme.Text)
+                        {
+                            greska2 = true;
+                            break;
+
+                        }
+
+                    }
+                    if (greska == true)
+                    {
+                        MessageBox.Show("Email je vec iskorišten");
+                        return;
+
+                    }
+                    if (greska2 == true)
+                    {
+                        MessageBox.Show("Korisnicko ime je vec iskorišteno");
+                        return;
+
+                    }
+
 
                     await service.Insert<Model.Klijent>(request);
+                    MessageBox.Show("Operacija uspjesna");
+                    Close();
                 }
-                MessageBox.Show("Operacija uspjesna");
+
             }
 
-          
-          
+
+
 
         }
         private async void FormKlijentiDetalji_Load(object sender, EventArgs e)
@@ -188,10 +266,7 @@ namespace eKnjige.WinUI.Klijenti
             }
         }
 
-        private void textPrezime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void textPrezime_Validating(object sender, CancelEventArgs e)
         {
@@ -223,38 +298,14 @@ namespace eKnjige.WinUI.Klijenti
             }
         }
 
-        private void textEmail_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textEmail.Text))
-            {
-
-                errorProvider.SetError(textEmail, "Obavezno Polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                try
-                {
-                    MailAddress mail = new MailAddress(textEmail.Text);
-                }
-                catch (Exception)
-                {
-                  
-                    errorProvider.SetError(textEmail,"Pogrešan format");
-                     e.Cancel = true;
-                }
-               
-               
-            }
-        }
+       
 
         private async void buttonGrad_Click(object sender, EventArgs e)
         {
             FormDodajGrad form = new FormDodajGrad();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                var listgradovi = await servicegrad.get<List<Model.Grad>>(null);
-                cmbGradovi.DataSource = listgradovi;
+                await LoadGradovi();
             }
 
 
@@ -269,49 +320,59 @@ namespace eKnjige.WinUI.Klijenti
             var hasUpperChar = new Regex(@"[A-Z]+");
             var hasMinimum8Chars = new Regex(@".{8,}");
 
-            if (string.IsNullOrWhiteSpace(textPassword.Text))
+            if (id == null)
             {
-               
-                errorProvider.SetError(textPassword, "Obavezno Polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                if (hasNumber.IsMatch(textPassword.Text) && hasUpperChar.IsMatch(textPassword.Text) && hasMinimum8Chars.IsMatch(textPassword.Text))
+                if (string.IsNullOrWhiteSpace(textPassword.Text))
                 {
-                    errorProvider.SetError(textPassword, null);
+
+                    errorProvider.SetError(textPassword, "Obavezno Polje");
+                    e.Cancel = true;
                 }
                 else
                 {
-                    errorProvider.SetError(textPassword, "Lozinka mora imati brojeve,velika slova i minimum 8 karaktera");
-                    e.Cancel = true;
+                    if (hasNumber.IsMatch(textPassword.Text) && hasUpperChar.IsMatch(textPassword.Text) && hasMinimum8Chars.IsMatch(textPassword.Text))
+                    {
+                        errorProvider.SetError(textPassword, null);
+                    }
+                    else
+                    {
+                        errorProvider.SetError(textPassword, "Lozinka mora imati brojeve,velika slova i minimum 8 karaktera");
+                        e.Cancel = true;
 
+                    }
                 }
+
+
             }
 
         }
 
         private void textPasswordPotvrda_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textPasswordPotvrda.Text))
+            if (id == null)
             {
-
-                errorProvider.SetError(textPasswordPotvrda, "Obavezno Polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                if (textPassword.Text == textPasswordPotvrda.Text)
+                if (string.IsNullOrWhiteSpace(textPasswordPotvrda.Text) && id == null)
                 {
-                    errorProvider.SetError(textPasswordPotvrda, null);
+
+                    errorProvider.SetError(textPasswordPotvrda, "Obavezno Polje");
+                    e.Cancel = true;
                 }
                 else
                 {
-                    errorProvider.SetError(textPasswordPotvrda, "Lozinke se ne slazu ");
-                    e.Cancel = true;
+                    if (textPassword.Text == textPasswordPotvrda.Text && id == null)
+                    {
+                        errorProvider.SetError(textPasswordPotvrda, null);
+                    }
+                    else
+                    {
+                        errorProvider.SetError(textPasswordPotvrda, "Lozinke se ne slazu ");
+                        e.Cancel = true;
+                    }
+
                 }
-               
+
             }
+
         }
 
         private void cmbGradovi_Validating(object sender, CancelEventArgs e)
@@ -355,6 +416,22 @@ namespace eKnjige.WinUI.Klijenti
             else
             {
                 errorProvider.SetError(cmbUloga, null);
+            }
+        }
+
+        private void textEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textEmail.Text))
+            {
+
+                errorProvider.SetError(textEmail, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+
+                errorProvider.SetError(textEmail, null);
+
             }
         }
     }

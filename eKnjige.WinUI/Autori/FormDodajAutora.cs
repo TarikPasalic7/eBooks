@@ -16,23 +16,55 @@ namespace eKnjige.WinUI.Autori
         public FormDodajAutora()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
         private async void btnDodaj_Click(object sender, EventArgs e)
         {
-            var insert = new Model.Autor
+            if (this.ValidateChildren())
+            {
+                var insert = new Model.Autor
+                {
+
+                    Ime = txtAutorIme.Text,
+                    Prezime = txtAutorPrezime.Text,
+                    Godiste = dateAutor.Value
+                };
+                await autorservice.Insert<Model.Autor>(insert);
+
+                MessageBox.Show("Operacija uspjesna");
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+
+        }
+
+        private void txtAutorIme_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAutorIme.Text))
             {
 
-                Ime = txtAutorIme.Text,
-                Prezime = txtAutorPrezime.Text,
-                Godiste = dateAutor.Value
-            };
-            await autorservice.Insert<Model.Autor>(insert);
+                errorProvider.SetError(txtAutorIme, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtAutorIme, null);
+            }
+        }
 
-            MessageBox.Show("Operacija uspjesna");
-            DialogResult = DialogResult.OK;
-            Close();
+        private void txtAutorPrezime_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAutorPrezime.Text))
+            {
 
+                errorProvider.SetError(txtAutorPrezime, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtAutorPrezime, null);
+            }
         }
     }
 }

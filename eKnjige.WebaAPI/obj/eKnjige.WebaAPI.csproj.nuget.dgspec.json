@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj": {}
+    "C:\\Users\\pc\\eBooks\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj": {}
   },
   "projects": {
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj": {
+    "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
         "projectName": "eKnjige.Model",
-        "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+        "projectPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\obj\\",
+        "outputPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -75,14 +75,14 @@
         }
       }
     },
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj": {
+    "C:\\Users\\pc\\eBooks\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\eBooks\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj",
         "projectName": "eKnjige.WebaAPI",
-        "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj",
+        "projectPath": "C:\\Users\\pc\\eBooks\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.WebaAPI\\obj\\",
+        "outputPath": "C:\\Users\\pc\\eBooks\\eKnjige.WebaAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -102,8 +102,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj": {
-                "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj"
+              "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj": {
+                "projectPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj"
               }
             }
           }

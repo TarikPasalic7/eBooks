@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P0HiOJaezMoAqc2XHJQX7sDMjnGRaU4ExNhljYR0lVB0pBgiY/5KtIG32RRxeycadicyq5MIxd9y2gmcr8zg2A==",
+  "dgSpecHash": "J3JD61xRL5RWnSYzg3Nmw72+uHX26GODjetBW4SYuDS+ejkNwXUDoYvawXP8gU4WXCkkFNbT2mb0Oen+H3PKCQ==",
   "success": true,
-  "projectFilePath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",

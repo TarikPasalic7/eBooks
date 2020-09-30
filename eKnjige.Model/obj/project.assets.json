@@ -3192,11 +3192,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
       "projectName": "eKnjige.Model",
-      "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+      "projectPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\obj\\",
+      "outputPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

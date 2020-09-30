@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKomentariKnjige));
             this.Komentari = new System.Windows.Forms.GroupBox();
             this.dgvKomentari = new System.Windows.Forms.DataGridView();
-            this.txtTrazi = new System.Windows.Forms.TextBox();
-            this.btnTrazi = new System.Windows.Forms.Button();
             this.KomentarId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.komentar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumKomentara = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTrazi = new System.Windows.Forms.TextBox();
+            this.btnTrazi = new System.Windows.Forms.Button();
             this.Komentari.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKomentari)).BeginInit();
             this.SuspendLayout();
@@ -67,27 +68,6 @@
             this.dgvKomentari.TabIndex = 0;
             this.dgvKomentari.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKomentari_CellContentClick);
             // 
-            // txtTrazi
-            // 
-            this.txtTrazi.Location = new System.Drawing.Point(192, 32);
-            this.txtTrazi.Multiline = true;
-            this.txtTrazi.Name = "txtTrazi";
-            this.txtTrazi.Size = new System.Drawing.Size(227, 33);
-            this.txtTrazi.TabIndex = 1;
-            // 
-            // btnTrazi
-            // 
-            this.btnTrazi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnTrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnTrazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTrazi.Location = new System.Drawing.Point(56, 29);
-            this.btnTrazi.Name = "btnTrazi";
-            this.btnTrazi.Size = new System.Drawing.Size(92, 36);
-            this.btnTrazi.TabIndex = 2;
-            this.btnTrazi.Text = "Trazi";
-            this.btnTrazi.UseVisualStyleBackColor = false;
-            this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
-            // 
             // KomentarId
             // 
             this.KomentarId.DataPropertyName = "KomentarId ";
@@ -112,6 +92,27 @@
             this.DatumKomentara.Name = "DatumKomentara";
             this.DatumKomentara.ReadOnly = true;
             // 
+            // txtTrazi
+            // 
+            this.txtTrazi.Location = new System.Drawing.Point(192, 32);
+            this.txtTrazi.Multiline = true;
+            this.txtTrazi.Name = "txtTrazi";
+            this.txtTrazi.Size = new System.Drawing.Size(227, 33);
+            this.txtTrazi.TabIndex = 1;
+            // 
+            // btnTrazi
+            // 
+            this.btnTrazi.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnTrazi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnTrazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTrazi.Location = new System.Drawing.Point(56, 29);
+            this.btnTrazi.Name = "btnTrazi";
+            this.btnTrazi.Size = new System.Drawing.Size(92, 36);
+            this.btnTrazi.TabIndex = 2;
+            this.btnTrazi.Text = "Trazi";
+            this.btnTrazi.UseVisualStyleBackColor = false;
+            this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
+            // 
             // FormKomentariKnjige
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,8 +122,9 @@
             this.Controls.Add(this.btnTrazi);
             this.Controls.Add(this.txtTrazi);
             this.Controls.Add(this.Komentari);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKomentariKnjige";
-            this.Text = "FormKomentariKnjige";
+            this.Text = "Komentari";
             this.Komentari.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKomentari)).EndInit();
             this.ResumeLayout(false);

@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKlijenti));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvKlijenti = new System.Windows.Forms.DataGridView();
-            this.btnPrikazi = new System.Windows.Forms.Button();
-            this.txtPretraga = new System.Windows.Forms.TextBox();
             this.KlijentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KorisnickoIme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumRodenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPrikazi = new System.Windows.Forms.Button();
+            this.txtPretraga = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
             this.SuspendLayout();
@@ -74,28 +75,6 @@
             this.dgvKlijenti.Size = new System.Drawing.Size(903, 284);
             this.dgvKlijenti.TabIndex = 0;
             this.dgvKlijenti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKlijenti_CellContentClick_1);
-            // 
-            // btnPrikazi
-            // 
-            this.btnPrikazi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnPrikazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPrikazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPrikazi.Location = new System.Drawing.Point(20, 36);
-            this.btnPrikazi.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrikazi.Name = "btnPrikazi";
-            this.btnPrikazi.Size = new System.Drawing.Size(129, 42);
-            this.btnPrikazi.TabIndex = 1;
-            this.btnPrikazi.Text = "Prikazi";
-            this.btnPrikazi.UseVisualStyleBackColor = false;
-            this.btnPrikazi.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtPretraga
-            // 
-            this.txtPretraga.Location = new System.Drawing.Point(180, 46);
-            this.txtPretraga.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPretraga.Name = "txtPretraga";
-            this.txtPretraga.Size = new System.Drawing.Size(168, 22);
-            this.txtPretraga.TabIndex = 2;
             // 
             // KlijentID
             // 
@@ -145,6 +124,28 @@
             this.DatumRodenja.Name = "DatumRodenja";
             this.DatumRodenja.ReadOnly = true;
             // 
+            // btnPrikazi
+            // 
+            this.btnPrikazi.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPrikazi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPrikazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPrikazi.Location = new System.Drawing.Point(20, 36);
+            this.btnPrikazi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrikazi.Name = "btnPrikazi";
+            this.btnPrikazi.Size = new System.Drawing.Size(129, 42);
+            this.btnPrikazi.TabIndex = 1;
+            this.btnPrikazi.Text = "Prikazi";
+            this.btnPrikazi.UseVisualStyleBackColor = false;
+            this.btnPrikazi.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtPretraga
+            // 
+            this.txtPretraga.Location = new System.Drawing.Point(180, 46);
+            this.txtPretraga.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPretraga.Name = "txtPretraga";
+            this.txtPretraga.Size = new System.Drawing.Size(168, 22);
+            this.txtPretraga.TabIndex = 2;
+            // 
             // FormKlijenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -155,9 +156,10 @@
             this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormKlijenti";
-            this.Text = "FormKlijenti";
+            this.Text = "Klijenti";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).EndInit();
             this.ResumeLayout(false);

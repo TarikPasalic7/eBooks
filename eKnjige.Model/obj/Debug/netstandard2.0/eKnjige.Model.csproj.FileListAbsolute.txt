@@ -25,3 +25,12 @@ D:\tarik\fit\Eknjige-master\eKnjige.WebaAPI\eKnjige.Model\obj\Debug\netstandard2
 D:\tarik\fit\Eknjige-master\eKnjige.WebaAPI\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.csproj.CoreCompileInputs.cache
 D:\tarik\fit\Eknjige-master\eKnjige.WebaAPI\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.dll
 D:\tarik\fit\Eknjige-master\eKnjige.WebaAPI\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.pdb
+C:\Users\pc\eBooks\eKnjige.Model\bin\Debug\netstandard2.0\eKnjige.Model.deps.json
+C:\Users\pc\eBooks\eKnjige.Model\bin\Debug\netstandard2.0\eKnjige.Model.dll
+C:\Users\pc\eBooks\eKnjige.Model\bin\Debug\netstandard2.0\eKnjige.Model.pdb
+C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.AssemblyInfoInputs.cache
+C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.AssemblyInfo.cs
+C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.csproj.CoreCompileInputs.cache
+C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.dll
+C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.pdb
+C:\Users\pc\eBooks\eKnjige.Model\obj\Debug\netstandard2.0\eKnjige.Model.csprojAssemblyReference.cache

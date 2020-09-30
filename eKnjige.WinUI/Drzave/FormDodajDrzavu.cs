@@ -16,38 +16,50 @@ namespace eKnjige.WinUI.Drzave
         public FormDodajDrzavu()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
         private async void buttonDrzavaSnimi_Click(object sender, EventArgs e)
         {
-            var insert = new Model.DrzavaRequest()
+            if (this.ValidateChildren())
             {
-                Naziv = textDrzavaNaziv.Text
-            };
+                var insert = new Model.DrzavaRequest()
+                {
+                    Naziv = textDrzavaNaziv.Text
+                };
 
-            var result=await service.Insert<Model.DrzavaRequest>(insert);
-            if(result != null)
-            {
-                MessageBox.Show("Država uspješno dodana.");
-                DialogResult = DialogResult.OK;
-                Close();
+                var result = await service.Insert<Model.DrzavaRequest>(insert);
+                if (result != null)
+                {
+                    MessageBox.Show("Država uspješno dodana.");
+                    DialogResult = DialogResult.OK;
+                    Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Greška");
+                }
 
             }
-            else
-            {
-                MessageBox.Show("Greška");
-            }
-     
-
-            
-
 
 
         }
 
-        private void FormDodajDrzavu_Load(object sender, EventArgs e)
-        {
 
+
+        private void textDrzavaNaziv_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textDrzavaNaziv.Text))
+            {
+
+                errorProvider.SetError(textDrzavaNaziv, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(textDrzavaNaziv, null);
+            }
         }
     }
 }

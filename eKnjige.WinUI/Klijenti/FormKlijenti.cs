@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eKnjige.Model;
 using eKnjige.Model.Requests;
 using Flurl;
 using Flurl.Http;
@@ -15,8 +16,11 @@ namespace eKnjige.WinUI.Klijenti
 {
     public partial class FormKlijenti : Form
     {
-
+        private readonly APIService _apiservicekomentari = new APIService("komentar");
         private readonly APIService _apiservice = new APIService("klijenti");
+        private readonly APIService _apiservicekupovina = new APIService("KupovinaKnjige");
+        private readonly APIService _apiserviceprijedlogknjige = new APIService("prijedlogknjige");
+        private readonly APIService _apiserviceeknjigaocjena = new APIService("eknjigaocjena");
         public FormKlijenti()
         {
             InitializeComponent();
@@ -77,6 +81,7 @@ namespace eKnjige.WinUI.Klijenti
             var result = await _apiservice.get<List<Model.Klijent>>(search);
 
             dgvKlijenti.DataSource = result;
+          
         }
 
       
@@ -88,11 +93,62 @@ namespace eKnjige.WinUI.Klijenti
             int id = Convert.ToInt32(dgvKlijenti.Rows[e.RowIndex].Cells[0].Value.ToString());
             if (e.ColumnIndex == 6)
             {
-
                 DialogResult result = MessageBox.Show("Da li zaista zelite izbrisati korisnika", "Upozorenje", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
+                    var kupobinalist = await _apiservicekupovina.get<List<KupovinaKnjige>>(null);
+                    var komentarilist = await _apiservicekomentari.get<List<Komentar>>(null);
+                    var prijedlogknjige = await _apiserviceprijedlogknjige.get<List<PrijedlogKnjiga>>(null);
+                    var eknjigaocjenalist = await _apiserviceeknjigaocjena.get<List<KlijentKnjigaOcjena>>(null);
+                    if (kupobinalist != null)
+                    {
+                        foreach (var ku in kupobinalist)
+                        {
+                            if (ku.KlijentID == id)
+                            {
+                                await _apiservicekupovina.Remove(ku.KupovinaKnjigeID);
+                            }
+                        }
+                    }
+                    if (komentarilist != null)
+                    {
+                        foreach (var ku in komentarilist)
+                        {
+                            if (ku.KlijentID == id)
+                            {
+                                await _apiservicekomentari.Remove(ku.KomentarId);
+                            }
+                        }
+                    }
+                    if (prijedlogknjige != null)
+                    {
+                        foreach (var ku in prijedlogknjige)
+                        {
+                            if (ku.KlijentID == id)
+                            {
+                                await _apiserviceprijedlogknjige.Remove(ku.PrijedlogKnjigeID);
+                            }
+                        }
+                    }
+                    if (eknjigaocjenalist != null)
+                    {
+                        foreach (var ku in eknjigaocjenalist)
+                        {
+                            if (ku.KlijentID == id)
+                            {
+                                await _apiserviceeknjigaocjena.Remove(ku.KlijentKnjigaOcijenaID);
+                            }
+                        }
+                    }
+
+
                     await _apiservice.Remove(id);
+                    var search = new KlijentiSearchRequest();
+                    search.Ime = txtPretraga.Text;
+                    var res = await _apiservice.get<List<Model.Klijent>>(search);
+
+                    dgvKlijenti.DataSource = null;
+                    dgvKlijenti.DataSource = res;
                     dugme();
                     MessageBox.Show("Uspjesno ste izbrisali korisnika");
                 }

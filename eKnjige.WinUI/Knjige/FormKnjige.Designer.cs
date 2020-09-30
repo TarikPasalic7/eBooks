@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKnjige));
             this.buttonPrikazi = new System.Windows.Forms.Button();
             this.textPrikazi = new System.Windows.Forms.TextBox();
             this.btnDodaj = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             // buttonPrikazi
             // 
             this.buttonPrikazi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonPrikazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPrikazi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonPrikazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonPrikazi.Location = new System.Drawing.Point(40, 29);
             this.buttonPrikazi.Name = "buttonPrikazi";
@@ -57,17 +58,17 @@
             // 
             // textPrikazi
             // 
-            this.textPrikazi.Location = new System.Drawing.Point(144, 31);
+            this.textPrikazi.Location = new System.Drawing.Point(151, 39);
             this.textPrikazi.Name = "textPrikazi";
-            this.textPrikazi.Size = new System.Drawing.Size(100, 20);
+            this.textPrikazi.Size = new System.Drawing.Size(146, 20);
             this.textPrikazi.TabIndex = 1;
             // 
             // btnDodaj
             // 
             this.btnDodaj.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDodaj.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnDodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDodaj.Location = new System.Drawing.Point(607, 44);
+            this.btnDodaj.Location = new System.Drawing.Point(597, 29);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(104, 37);
             this.btnDodaj.TabIndex = 3;
@@ -134,7 +135,7 @@
             // 
             this.Cijena.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Cijena.DataPropertyName = "Cijena";
-            this.Cijena.HeaderText = "Cijena";
+            this.Cijena.HeaderText = "Cijena (KM)";
             this.Cijena.Name = "Cijena";
             this.Cijena.ReadOnly = true;
             // 
@@ -156,8 +157,9 @@
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.textPrikazi);
             this.Controls.Add(this.buttonPrikazi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKnjige";
-            this.Text = "FormKnjige";
+            this.Text = "Knjige";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).EndInit();
             this.ResumeLayout(false);

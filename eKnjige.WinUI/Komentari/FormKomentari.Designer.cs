@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKomentari));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.KomentarId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.komentar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,11 +82,11 @@
             // btntrazi
             // 
             this.btntrazi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btntrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btntrazi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btntrazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btntrazi.Location = new System.Drawing.Point(66, 51);
+            this.btntrazi.Location = new System.Drawing.Point(59, 45);
             this.btntrazi.Name = "btntrazi";
-            this.btntrazi.Size = new System.Drawing.Size(100, 31);
+            this.btntrazi.Size = new System.Drawing.Size(100, 37);
             this.btntrazi.TabIndex = 1;
             this.btntrazi.Text = "Traži";
             this.btntrazi.UseVisualStyleBackColor = false;
@@ -116,12 +117,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.ClientSize = new System.Drawing.Size(774, 438);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtTrazi);
             this.Controls.Add(this.btntrazi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKomentari";
-            this.Text = "FormKomentari";
+            this.Text = "Komentari";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

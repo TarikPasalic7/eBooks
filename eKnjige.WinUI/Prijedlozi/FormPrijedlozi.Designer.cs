@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrijedlozi));
             this.buttonTrazi = new System.Windows.Forms.Button();
             this.textBoxTrazi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,8 +44,8 @@
             // buttonTrazi
             // 
             this.buttonTrazi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonTrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonTrazi.Location = new System.Drawing.Point(12, 34);
+            this.buttonTrazi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTrazi.Location = new System.Drawing.Point(34, 34);
             this.buttonTrazi.Name = "buttonTrazi";
             this.buttonTrazi.Size = new System.Drawing.Size(106, 34);
             this.buttonTrazi.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             // textBoxTrazi
             // 
-            this.textBoxTrazi.Location = new System.Drawing.Point(149, 42);
+            this.textBoxTrazi.Location = new System.Drawing.Point(183, 43);
             this.textBoxTrazi.Name = "textBoxTrazi";
             this.textBoxTrazi.Size = new System.Drawing.Size(146, 20);
             this.textBoxTrazi.TabIndex = 2;
@@ -132,8 +133,9 @@
             this.Controls.Add(this.textBoxTrazi);
             this.Controls.Add(this.buttonTrazi);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrijedlozi";
-            this.Text = "FormPrijedlozi";
+            this.Text = "Prijedlozi";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrijedlozi)).EndInit();
             this.ResumeLayout(false);

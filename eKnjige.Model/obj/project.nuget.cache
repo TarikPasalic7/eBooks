@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "03Pi6WCl0taJA9UBpYl8uCOzCXE6qoR71Yi8623RdMwIibbBW9gu+JDQg4ouUkGeiSmjSycOEFu61FUw2D/09Q==",
+  "dgSpecHash": "iFa6uniztdYUPB9Vfu/frQCPT8GAudUAO3kntR35bunqr9vVblR9vXhcElWPPEqJEGnaBC2lNaBIIxv6fG1VJg==",
   "success": true,
-  "projectFilePath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+  "projectFilePath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

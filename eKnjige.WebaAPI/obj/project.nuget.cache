@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nE0uJYJ36QTDVrKcTZWaVTlIcYVhUE7LL/W875FMfgnh6a1bGFPrYvACVbKWYKMOfWnCnDQeHoyM8udny/bBcA==",
+  "dgSpecHash": "YNGeFlpcBcG3EubpemSOPzcYi3HC59/xxMlP7YOSJdJ5IyTvIj/zCVaeXfP7KaT5XZ0rCOezrMbpciw6CKqYbg==",
   "success": true,
-  "projectFilePath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj",
+  "projectFilePath": "C:\\Users\\pc\\eBooks\\eKnjige.WebaAPI\\eKnjige.WebaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4OPKciXfoxafAIdf+usNqLIIoWnxD/Pj03mIWwGY41IO+KL1N0U+hZBtrxhS71pO3pLFd8pqdAp41mMBSau2cg==",
+  "dgSpecHash": "l70E/PzUwFxFfihrllmP/g9HGexeTVSEU3OGgcWQuHfYytaVkQeAPPpCm7zCvQoEU5YcI917CGP5S2rfkHjOUw==",
   "success": true,
-  "projectFilePath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\EKnjige.MobileApp.UWP.csproj",
+  "projectFilePath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\EKnjige.MobileApp.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

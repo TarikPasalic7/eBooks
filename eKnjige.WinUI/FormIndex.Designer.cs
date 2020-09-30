@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIndex));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.klijentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretragaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,18 +38,17 @@
             this.pretragaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kategorijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipFajlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.komentariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prijedloziKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.buttonPrijedlozi = new System.Windows.Forms.Button();
-            this.buttonEKnjige = new System.Windows.Forms.Button();
-            this.buttonKorisnik = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonPrijedlozi = new System.Windows.Forms.Button();
+            this.buttonEKnjige = new System.Windows.Forms.Button();
+            this.buttonKorisnik = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,6 @@
             this.knjigeToolStripMenuItem,
             this.kategorijeToolStripMenuItem,
             this.autoriToolStripMenuItem,
-            this.tipFajlaToolStripMenuItem,
             this.komentariToolStripMenuItem,
             this.prijedloziKnjigaToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -75,21 +74,21 @@
             this.pretragaToolStripMenuItem,
             this.noviKlijentToolStripMenuItem});
             this.klijentiToolStripMenuItem.Name = "klijentiToolStripMenuItem";
-            this.klijentiToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.klijentiToolStripMenuItem.Text = "Klijenti";
+            this.klijentiToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.klijentiToolStripMenuItem.Text = "Korisnici";
             // 
             // pretragaToolStripMenuItem
             // 
             this.pretragaToolStripMenuItem.Name = "pretragaToolStripMenuItem";
-            this.pretragaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.pretragaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pretragaToolStripMenuItem.Text = "Pretraga";
             this.pretragaToolStripMenuItem.Click += new System.EventHandler(this.pretragaToolStripMenuItem_Click);
             // 
             // noviKlijentToolStripMenuItem
             // 
             this.noviKlijentToolStripMenuItem.Name = "noviKlijentToolStripMenuItem";
-            this.noviKlijentToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.noviKlijentToolStripMenuItem.Text = "Novi Klijent";
+            this.noviKlijentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noviKlijentToolStripMenuItem.Text = "Novi Korisnik";
             this.noviKlijentToolStripMenuItem.Click += new System.EventHandler(this.noviKlijentToolStripMenuItem_Click_1);
             // 
             // knjigeToolStripMenuItem
@@ -103,7 +102,7 @@
             // pretragaToolStripMenuItem1
             // 
             this.pretragaToolStripMenuItem1.Name = "pretragaToolStripMenuItem1";
-            this.pretragaToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.pretragaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.pretragaToolStripMenuItem1.Text = "Pretraga";
             this.pretragaToolStripMenuItem1.Click += new System.EventHandler(this.pretragaToolStripMenuItem1_Click);
             // 
@@ -120,12 +119,6 @@
             this.autoriToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.autoriToolStripMenuItem.Text = "Autori";
             this.autoriToolStripMenuItem.Click += new System.EventHandler(this.autoriToolStripMenuItem_Click);
-            // 
-            // tipFajlaToolStripMenuItem
-            // 
-            this.tipFajlaToolStripMenuItem.Name = "tipFajlaToolStripMenuItem";
-            this.tipFajlaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.tipFajlaToolStripMenuItem.Text = "TipFajla";
             // 
             // komentariToolStripMenuItem
             // 
@@ -157,39 +150,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // buttonPrijedlozi
-            // 
-            this.buttonPrijedlozi.BackgroundImage = global::eKnjige.WinUI.Properties.Resources.Prijedlozi;
-            this.buttonPrijedlozi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonPrijedlozi.Location = new System.Drawing.Point(578, 148);
-            this.buttonPrijedlozi.Name = "buttonPrijedlozi";
-            this.buttonPrijedlozi.Size = new System.Drawing.Size(241, 171);
-            this.buttonPrijedlozi.TabIndex = 6;
-            this.buttonPrijedlozi.UseVisualStyleBackColor = true;
-            this.buttonPrijedlozi.Click += new System.EventHandler(this.buttonPrijedlozi_Click);
-            // 
-            // buttonEKnjige
-            // 
-            this.buttonEKnjige.BackgroundImage = global::eKnjige.WinUI.Properties.Resources.EKnjige;
-            this.buttonEKnjige.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEKnjige.Location = new System.Drawing.Point(298, 148);
-            this.buttonEKnjige.Name = "buttonEKnjige";
-            this.buttonEKnjige.Size = new System.Drawing.Size(241, 171);
-            this.buttonEKnjige.TabIndex = 5;
-            this.buttonEKnjige.UseVisualStyleBackColor = true;
-            this.buttonEKnjige.Click += new System.EventHandler(this.buttonEKnjige_Click);
-            // 
-            // buttonKorisnik
-            // 
-            this.buttonKorisnik.BackgroundImage = global::eKnjige.WinUI.Properties.Resources.users;
-            this.buttonKorisnik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonKorisnik.Location = new System.Drawing.Point(21, 148);
-            this.buttonKorisnik.Name = "buttonKorisnik";
-            this.buttonKorisnik.Size = new System.Drawing.Size(241, 171);
-            this.buttonKorisnik.TabIndex = 4;
-            this.buttonKorisnik.UseVisualStyleBackColor = true;
-            this.buttonKorisnik.Click += new System.EventHandler(this.buttonKorisnik_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -220,6 +180,39 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Prijedlozi";
             // 
+            // buttonPrijedlozi
+            // 
+            this.buttonPrijedlozi.BackgroundImage = global::eKnjige.WinUI.Properties.Resources.Prijedlozi;
+            this.buttonPrijedlozi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPrijedlozi.Location = new System.Drawing.Point(578, 148);
+            this.buttonPrijedlozi.Name = "buttonPrijedlozi";
+            this.buttonPrijedlozi.Size = new System.Drawing.Size(241, 171);
+            this.buttonPrijedlozi.TabIndex = 6;
+            this.buttonPrijedlozi.UseVisualStyleBackColor = true;
+            this.buttonPrijedlozi.Click += new System.EventHandler(this.buttonPrijedlozi_Click);
+            // 
+            // buttonEKnjige
+            // 
+            this.buttonEKnjige.BackgroundImage = global::eKnjige.WinUI.Properties.Resources.EKnjige;
+            this.buttonEKnjige.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEKnjige.Location = new System.Drawing.Point(298, 148);
+            this.buttonEKnjige.Name = "buttonEKnjige";
+            this.buttonEKnjige.Size = new System.Drawing.Size(241, 171);
+            this.buttonEKnjige.TabIndex = 5;
+            this.buttonEKnjige.UseVisualStyleBackColor = true;
+            this.buttonEKnjige.Click += new System.EventHandler(this.buttonEKnjige_Click);
+            // 
+            // buttonKorisnik
+            // 
+            this.buttonKorisnik.BackgroundImage = global::eKnjige.WinUI.Properties.Resources.kor;
+            this.buttonKorisnik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonKorisnik.Location = new System.Drawing.Point(21, 148);
+            this.buttonKorisnik.Name = "buttonKorisnik";
+            this.buttonKorisnik.Size = new System.Drawing.Size(241, 171);
+            this.buttonKorisnik.TabIndex = 4;
+            this.buttonKorisnik.UseVisualStyleBackColor = true;
+            this.buttonKorisnik.Click += new System.EventHandler(this.buttonKorisnik_Click);
+            // 
             // FormIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,10 +228,11 @@
             this.Controls.Add(this.buttonKorisnik);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormIndex";
-            this.Text = "FormIndex";
+            this.Text = "E-Knjige";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -261,7 +255,6 @@
         private System.Windows.Forms.ToolStripMenuItem pretragaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem kategorijeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipFajlaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem komentariToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prijedloziKnjigaToolStripMenuItem;
         private System.Windows.Forms.Button buttonKorisnik;

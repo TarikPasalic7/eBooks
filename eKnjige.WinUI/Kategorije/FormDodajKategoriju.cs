@@ -17,29 +17,46 @@ namespace eKnjige.WinUI.Kategorije
         public FormDodajKategoriju()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
      
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private async void btnDodajKategoriju_Click(object sender, EventArgs e)
         {
-            var insert = new Model.Requests.KategorijaInertRequest()
+            if (this.ValidateChildren())
             {
-                Naziv = txtNaziv.Text
+                var insert = new Model.Requests.KategorijaInertRequest()
+                {
+                    Naziv = txtNaziv.Text
 
-        };
+                };
 
-            await kategorijaservice.Insert<Model.Requests.KategorijaInertRequest>(insert);
+                await kategorijaservice.Insert<Model.Requests.KategorijaInertRequest>(insert);
 
-            MessageBox.Show("Operacija uspjesna");
-            DialogResult = DialogResult.OK;
-            Close();
+                MessageBox.Show("Operacija uspjesna");
+                DialogResult = DialogResult.OK;
+                Close();
 
+            }
+
+
+        }
+
+        private void txtNaziv_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtNaziv.Text))
+            {
+
+                errorProvider.SetError(txtNaziv, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtNaziv, null);
+            }
         }
     }
 }

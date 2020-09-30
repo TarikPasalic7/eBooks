@@ -20383,11 +20383,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\EKnjige.MobileApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\EKnjige.MobileApp.UWP.csproj",
       "projectName": "EKnjige.MobileApp.UWP",
-      "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\EKnjige.MobileApp.UWP.csproj",
+      "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\EKnjige.MobileApp.UWP.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\obj\\",
+      "outputPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -20409,8 +20409,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
-              "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj"
+            "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
+              "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj"
             }
           }
         }

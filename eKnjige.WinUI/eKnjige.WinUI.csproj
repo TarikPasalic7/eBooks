@@ -210,7 +210,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="b.ico" />
+    <Content Include="ddd.png" />
     <Content Include="EKnjige.png" />
+    <Content Include="kor.png" />
+    <Content Include="no.png" />
     <Content Include="Prijedlozi.png" />
     <Content Include="users.png" />
     <None Include="Resources\User.png" />

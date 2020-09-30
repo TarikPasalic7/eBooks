@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj": {}
+    "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj": {}
   },
   "projects": {
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj": {
+    "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
         "projectName": "EKnjige.MobileApp.Android",
-        "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
+        "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\obj\\",
+        "outputPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
-                "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj"
+              "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
+                "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj"
               }
             }
           }
@@ -54,14 +54,14 @@
         }
       }
     },
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
+    "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj",
         "projectName": "EKnjige.MobileApp",
-        "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj",
+        "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\obj\\",
+        "outputPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -81,8 +81,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj": {
-                "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj"
+              "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj": {
+                "projectPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj": {
+    "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
         "projectName": "eKnjige.Model",
-        "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\eKnjige.Model.csproj",
+        "projectPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\eKnjige.Model.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\eKnjige.Model\\obj\\",
+        "outputPath": "C:\\Users\\pc\\eBooks\\eKnjige.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

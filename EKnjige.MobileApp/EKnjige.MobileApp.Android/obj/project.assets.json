@@ -3231,11 +3231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
       "projectName": "EKnjige.MobileApp.Android",
-      "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
+      "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\EKnjige.MobileApp.Android.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3256,8 +3256,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
-              "projectPath": "D:\\tarik\\fit\\Eknjige-master\\eKnjige.WebaAPI\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj"
+            "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj": {
+              "projectPath": "C:\\Users\\pc\\eBooks\\EKnjige.MobileApp\\EKnjige.MobileApp\\EKnjige.MobileApp.csproj"
             }
           }
         }

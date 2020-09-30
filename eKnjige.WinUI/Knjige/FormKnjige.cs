@@ -20,18 +20,20 @@ namespace eKnjige.WinUI.Knjige
             dgvKnjige.AutoGenerateColumns = false;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
 
         private async void buttonPrikazi_Click(object sender, EventArgs e)
         {
             var search = new Model.Requests.eKnjigeSearchRequest();
             search.Naziv = textPrikazi.Text;
             var result = await _apiservice.get<List<Model.EKnjiga>>(search);
+            foreach (var r in result)
+            {
 
-            dgvKnjige.DataSource= result;
+                r.OcjenaKnjige = (float)Math.Round(r.OcjenaKnjige * 10f) / 10f;
+
+            }
+            dgvKnjige.DataSource = result;
         }
 
      

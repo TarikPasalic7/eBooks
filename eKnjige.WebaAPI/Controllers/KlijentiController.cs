@@ -69,5 +69,11 @@ namespace eKnjige.WebaAPI.Controllers
             return _service.UpdateProfile(request);
         }
 
+        [Authorize]
+        [HttpDelete("{id}")]
+        public bool Remove(int id)
+        {
+            return _service.Remove(id);
+        }
     }
 }

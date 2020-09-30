@@ -18,13 +18,21 @@ namespace eKnjige.WinUI.Gradovi
         public FormDodajGrad()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
-        private  void buttonDodajDrzavu_Click(object sender, EventArgs e)
+        private async  void buttonDodajDrzavu_Click(object sender, EventArgs e)
         {
             FormDodajDrzavu form = new FormDodajDrzavu();
 
-             form.Show();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+
+                var result = await servicedrzava.get<List<Model.Drzava>>(null);
+                cmbDrzava.DataSource = result;
+
+            }
+
         }
 
         private async void FormDodajGrad_Load(object sender, EventArgs e)
@@ -40,22 +48,50 @@ namespace eKnjige.WinUI.Gradovi
 
         private async void buttonSnimiGrad_Click(object sender, EventArgs e)
         {
-            var idObj = cmbDrzava.SelectedValue;
-            Model.Drzava request = new Model.Drzava();
-            if (int.TryParse(idObj.ToString(), out int id))
+            if (this.ValidateChildren())
             {
-                request.DrzavaID = id;
+                var idObj = cmbDrzava.SelectedValue;
+                Model.Drzava request = new Model.Drzava();
+                if (int.TryParse(idObj.ToString(), out int id))
+                {
+                    request.DrzavaID = id;
+                }
+                request.Naziv = textNaziv.Text;
+
+
+                await servicegrad.Insert<Model.Grad>(request);
+                MessageBox.Show("Operacija uspjesna");
+                DialogResult = DialogResult.OK;
+                Close();
             }
-            request.Naziv = textNaziv.Text;
-
-
-            await servicegrad.Insert<Model.Grad>(request);
-             MessageBox.Show("Operacija uspjesna");
         }
 
+        private void textNaziv_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textNaziv.Text))
+            {
 
+                errorProvider.SetError(textNaziv, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(textNaziv, null);
+            }
+        }
 
-       
+        private void cmbDrzava_Validating(object sender, CancelEventArgs e)
+        {
+            if (cmbDrzava.SelectedValue == null)
+            {
 
+                errorProvider.SetError(cmbDrzava, "Obavezno Polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(cmbDrzava, null);
+            }
+        }
     }
 }
